@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@kitware/vtk.js": "^18.4.1",
+    "umi": "^3.5.2"
+  },
+  "devDependencies": {
+    "@umijs/fabric": "^2.5.7",
+    "@umijs/plugin-esbuild": "^1.1.0",
+    "@umijs/preset-react": "^1.8.10",
+    "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.4",
+    "copy-webpack-plugin": "6",
+    "cross-env": "^7.0.3",
+    "css-loader": "5.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.22.0",
+    "lint-staged": "^10.5.4",
+    "postcss-loader": "3.0.0",
+    "prettier": "^2.2.1",
+    "raw-loader": "4.0.2",
+    "react-dev-inspector": "^1.5.1",
+    "standard-version": "^9.3.0",
+    "style-loader": "2.0.0",
+    "webpack": "5.31.2",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2",
+    "webpack-merge": "5.7.3",
+    "worker-loader": "3.0.8",
+    "yorkie": "^2.0.0"
+
+  }
+}
